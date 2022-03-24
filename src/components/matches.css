@@ -1,0 +1,35 @@
+.matchWrapper {
+    display: flex;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 20px;
+}
+.playerWrapper {
+    display: flex;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.redTeam {
+    width: 50%;
+    background-color: #f44336;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px;
+}
+
+.blueTeam {
+    width: 50%;
+    background-color: #007bff;
+    color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+}

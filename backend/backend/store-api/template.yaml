@@ -1,0 +1,228 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Implementing REST API for book catalog
+
+Globals:
+  Function:
+    Runtime: nodejs8.10
+    Timeout: 60
+
+Resources:
+  MyApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: StoreApi
+      StageName: Prod
+      DefinitionBody:
+        swagger: '2.0'
+        basePath: '/Prod'
+        schemes: 
+        - 'https'
+        paths:
+          stores:
+            get:
+              produces:
+              - "application/json"
+              responses: {}
+              security:
+              - ygo-auth: []
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:Babyfoot/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+            options:
+              produces:
+              - "application/json"
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:ygo-cors/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+          stores:
+            get:
+              produces:
+              - "application/json"
+              responses: {}
+              security:
+              - ygo-auth: []
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:Babyfoot/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+            options:
+              produces:
+              - "application/json"
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:ygo-cors/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+          stores/{store}:
+            get:
+              produces:
+              - "application/json"
+              responses: {}
+              security:
+              - ygo-auth: []
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:Babyfoot/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+            options:
+              produces:
+              - "application/json"
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:ygo-cors/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+          stores/{store}/{id}:
+            get:
+              produces:
+              - "application/json"
+              responses: {}
+              security:
+              - ygo-auth: []
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:Babyfoot/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+            options:
+              produces:
+              - "application/json"
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:ygo-cors/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+          stores/{store}/{id}/products:
+            get:
+              produces:
+              - "application/json"
+              responses: {}
+              security:
+              - ygo-auth: []
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:Babyfoot/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+            options:
+              produces:
+              - "application/json"
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:ygo-cors/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+          stores/{store}/{id}/products/{product}:
+            get:
+              produces:
+              - "application/json"
+              responses: {}
+              security:
+              - ygo-auth: []
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:Babyfoot/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+            options:
+              produces:
+              - "application/json"
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:ygo-cors/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+          matches:
+            get:
+              produces:
+              - "application/json"
+              responses: {}
+              security:
+              - ygo-auth: []
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:Babyfoot/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+            options:
+              produces:
+              - "application/json"
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:ygo-cors/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+          login:
+            post:
+              produces:
+              - "application/json"
+              responses: {}
+              security:
+              - ygo-auth: []
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:Babyfoot/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+            options:
+              produces:
+              - "application/json"
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:ygo-cors/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+          register:
+            post:
+              produces:
+              - "application/json"
+              responses: {}
+              security:
+              - ygo-auth: []
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:Babyfoot/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"
+            options:
+              produces:
+              - "application/json"
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: arn:aws:apigateway:eu-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-central-1:773532537154:function:ygo-cors/invocations
+                responses: {}
+                httpMethod: "POST"
+                credentials: arn:aws:iam::773532537154:role/ygoCors-HelloWorldFunctionRole-1NXEJDYOKHISE
+                type: "aws_proxy"

@@ -1,0 +1,7 @@
+{
+    "M" : 
+        {
+            {"Status": {"S" : "accepted"}}, 
+            {"userId": {"S" : "test1.test1@ynov.com"}}
+        }
+}

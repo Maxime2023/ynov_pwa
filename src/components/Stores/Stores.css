@@ -1,0 +1,53 @@
+.storeInput{
+  width:70%;
+}
+
+.storeButtonSearch{
+  width:30%;
+}
+.storeButtonSearchWrapper {
+  width: 50%;
+  margin-left: 25%;
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  
+}
+.storesSelector {
+  padding: 10px;
+}
+.storeSearch{
+  display:flex;
+  padding: 10px;
+}
+
+.allStores{
+  padding-top: 140px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.StoreWrapperHeaderFixer {
+
+}
+.StoreWrapperHeader {
+  position: absolute;
+  /* width: 100%; */
+  background-color: white;
+  padding-top: 30px;
+}
+
+.storeResults{
+  /* padding-top: 70px; */
+}
+.inputStoreWrapper {
+  /* padding: 10px; */
+  width: 100%;
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+  border-radius: 10px;
+  color: #2a3345
+}
